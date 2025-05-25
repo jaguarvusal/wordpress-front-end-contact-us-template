@@ -1271,27 +1271,36 @@ object {
 
 .social-icons {
     margin-top: 100px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .social-icons a {
     display: inline-block;
-    margin-right: -30px;
+    margin: 0;
+    padding: 0;
+    width: 30px;
+    height: 30px;
 }
 
+.social-icons img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* Make Facebook icon bigger and move it lower */
 .social-icons a:first-child img {
-    position: relative;
-    top: -12px;
-    transform: scale(1.5);
+    transform: scale(1.5) translateY(4px);
 }
 
-.social-icons a:last-child {
-    margin-left: 16px;
-}
-
-.social-icons a:last-child img {
-    position: relative;
-    top: 6px;
-    transform: scale(1.6);
+@media screen and (max-width: 768px) {
+    .social-icons {
+        margin-top: 40px;
+        gap: 8px;
+    }
 }
 
 /* Top Banner Styles */
@@ -1645,5 +1654,30 @@ body > div > .logo-container {
 
     .breadcrumb {
         padding-left: 15px;
+    }
+	
+}
+
+.site-logo {
+    max-width: 150px;
+    height: auto;
+    display: block;
+    margin: 20px 0 0 40px;
+    padding-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .site-logo {
+        max-width: 150px;
+        padding-bottom: 15px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .site-logo {
+        max-width: 120px;
+        padding-bottom: 10px;
+        margin: 0 auto;
     }
 }

@@ -178,3 +178,71 @@ function hide_admin_bar() {
 	}
 }
 add_action('after_setup_theme', 'hide_admin_bar');
+
+function ct_custom_theme_settings_menu() {
+    add_theme_page(
+        'Theme Settings',            // Page title
+        'CT Theme Settings',         // Menu title
+        'manage_options',            // Capability
+        'ct-theme-settings',         // Menu slug
+        'ct_custom_theme_settings_page' // Callback function
+    );
+}
+add_action('admin_menu', 'ct_custom_theme_settings_menu');
+
+function ct_custom_theme_settings_page() {
+    ?>
+    <div class="wrap">
+        <h1>Theme Settings</h1>
+        <form method="post" action="options.php" enctype="multipart/form-data">
+            <?php
+            settings_fields('ct_theme_settings_group');
+            do_settings_sections('ct-theme-settings');
+            submit_button();
+            ?>
+        </form>
+    </div>
+    <?php
+}
+
+function ct_custom_register_settings() {
+    // Logo
+    register_setting('ct_theme_settings_group', 'ct_logo');
+    add_settings_section('ct_main_section', '', null, 'ct-theme-settings');
+
+    add_settings_field('ct_logo', 'Logo', 'ct_logo_callback', 'ct-theme-settings', 'ct_main_section');
+    function ct_logo_callback() {
+        $logo = get_option('ct_logo');
+        echo '<input type="text" name="ct_logo" value="' . esc_attr($logo) . '" class="regular-text">';
+        echo '<p>Upload logo via Media → Library and paste URL here</p>';
+    }
+
+    // Phone Number
+    register_setting('ct_theme_settings_group', 'ct_phone');
+    add_settings_field('ct_phone', 'Phone Number', function() {
+        echo '<input type="text" name="ct_phone" value="' . esc_attr(get_option('ct_phone')) . '" class="regular-text">';
+    }, 'ct-theme-settings', 'ct_main_section');
+
+    // Address
+    register_setting('ct_theme_settings_group', 'ct_address');
+    add_settings_field('ct_address', 'Address', function() {
+        echo '<textarea name="ct_address" class="large-text" rows="3">' . esc_textarea(get_option('ct_address')) . '</textarea>';
+    }, 'ct-theme-settings', 'ct_main_section');
+
+    // Fax Number
+    register_setting('ct_theme_settings_group', 'ct_fax');
+    add_settings_field('ct_fax', 'Fax Number', function() {
+        echo '<input type="text" name="ct_fax" value="' . esc_attr(get_option('ct_fax')) . '" class="regular-text">';
+    }, 'ct-theme-settings', 'ct_main_section');
+
+    // Social Media Links
+    $socials = ['facebook', 'twitter', 'linkedin', 'pinterest'];
+    foreach ($socials as $social) {
+        $key = 'ct_' . $social;
+        register_setting('ct_theme_settings_group', $key);
+        add_settings_field($key, ucfirst($social) . ' URL', function() use ($key) {
+            echo '<input type="url" name="' . $key . '" value="' . esc_attr(get_option($key)) . '" class="regular-text">';
+        }, 'ct-theme-settings', 'ct_main_section');
+    }
+}
+add_action('admin_init', 'ct_custom_register_settings');

@@ -84,26 +84,26 @@ get_header(); ?>
                     </div>
                     <div class="social-icons">
                         <?php if ($facebook = get_option('ct_facebook')) : ?>
-                            <a href="<?php echo esc_url($facebook); ?>" class="social-icon facebook" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
-                                <i class="fab fa-facebook-f"></i>
+                            <a href="<?php echo esc_url($facebook); ?>" target="_blank" rel="noopener noreferrer">
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/fb-logo.png" alt="Facebook" width="30" height="30" />
                             </a>
                         <?php endif; ?>
                         
                         <?php if ($twitter = get_option('ct_twitter')) : ?>
-                            <a href="<?php echo esc_url($twitter); ?>" class="social-icon twitter" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
-                                <i class="fab fa-twitter"></i>
+                            <a href="<?php echo esc_url($twitter); ?>" target="_blank" rel="noopener noreferrer">
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/t-logo.png" alt="Twitter" width="30" height="30" />
                             </a>
                         <?php endif; ?>
                         
                         <?php if ($linkedin = get_option('ct_linkedin')) : ?>
-                            <a href="<?php echo esc_url($linkedin); ?>" class="social-icon linkedin" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
-                                <i class="fab fa-linkedin-in"></i>
+                            <a href="<?php echo esc_url($linkedin); ?>" target="_blank" rel="noopener noreferrer">
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/l-logo.png" alt="LinkedIn" width="30" height="30" />
                             </a>
                         <?php endif; ?>
                         
                         <?php if ($pinterest = get_option('ct_pinterest')) : ?>
-                            <a href="<?php echo esc_url($pinterest); ?>" class="social-icon pinterest" aria-label="Pinterest" target="_blank" rel="noopener noreferrer">
-                                <i class="fab fa-pinterest-p"></i>
+                            <a href="<?php echo esc_url($pinterest); ?>" target="_blank" rel="noopener noreferrer">
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/p-logo.png" alt="Pinterest" width="30" height="30" />
                             </a>
                         <?php endif; ?>
                     </div>
@@ -113,6 +113,6 @@ get_header(); ?>
     </div>
 </main>
 
-<?php wp_footer(); ?>
+<?php get_footer(); ?>
 </body>
 </html> 
