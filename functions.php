@@ -162,6 +162,9 @@ if ( class_exists( 'WooCommerce' ) ) {
 // Include theme settings
 require get_template_directory() . '/inc/theme-settings.php';
 
+// Include custom menu walker
+require get_template_directory() . '/inc/class-ct-custom-menu-walker.php';
+
 add_theme_support( 'page-attributes' );
 
 // Hide admin bar for non-admin users

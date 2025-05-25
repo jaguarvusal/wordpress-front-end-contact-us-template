@@ -55,6 +55,7 @@
 			'menu_class'     => 'main-menu',
 			'container'      => false,
 			'fallback_cb'    => false,
+			'walker'         => new CT_Custom_Menu_Walker(),
 		  ) );
 		  ?>
 		</nav>
