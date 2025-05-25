@@ -1107,192 +1107,191 @@ object {
 
 /* === Contact Section Layout === */
 .contact-section {
-	display: flex;
-	gap: 60px;
-	max-width: 1400px;
-	margin: 120px auto 60px;
-	margin-left: 150px;
-	font-family: sans-serif;
+    display: flex;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 120px auto 60px;
+    font-family: sans-serif;
 }
 
 .contact-left {
-	flex: 1;
-	max-width: 600px;
-	display: flex;
-	flex-direction: column;
+    flex: 1;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
 }
 
 .contact-right {
-	flex: 1;
-	padding-top: 165px;
-	padding-left: 40px;
+    flex: 1;
+    padding-top: 165px;
+    padding-left: 40px;
 }
 
 .contact-left h2,
 .contact-left h3,
 .contact-right h3 {
-	color: #f26522;
-	margin-top: 0;
+    color: #f26522;
+    margin-top: 0;
 }
 
 .contact-left .input-row {
-	display: flex;
-	flex-direction: column;
-	gap: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 .contact-left .input-row .name-field {
-	width: 100%;
-	margin-bottom: 1px;
+    width: 100%;
+    margin-bottom: 1px;
 }
 
 .contact-left .input-row .contact-fields {
-	display: flex;
-	gap: 15px;
-	width: 100%;
-	margin-bottom: 15px;
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    margin-bottom: 15px;
 }
 
 .contact-left .input-row .contact-fields input {
-	width: 100%;
+    width: 100%;
 }
 
 .contact-left h3 {
-	color: #f26522;
-	margin-top: 18px;
-	position: relative;
-	padding-bottom: 10px;
-	text-transform: uppercase;
-	font-family: 'Open Sans', sans-serif;
-	font-size: 23px;
-	font-weight: 400;
-	letter-spacing: 1px;
+    color: #f26522;
+    margin-top: 18px;
+    position: relative;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 23px;
+    font-weight: 400;
+    letter-spacing: 1px;
 }
 
 .contact-left h3::after {
-	content: '';
-	position: absolute;
-	bottom: 0;
-	left: 100px;
-	width: calc(100% - 100px);
-	height: 6px;
-	background-color: #525252;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 100px;
+    width: calc(100% - 100px);
+    height: 6px;
+    background-color: #525252;
 }
 
 .contact-left h2 {
-	padding-left: 100px;
-	font-size: 27px;
-	margin-bottom: 15px;
+    padding-left: 100px;
+    font-size: 27px;
+    margin-bottom: 15px;
 }
 
 .contact-left h3,
 .contact-left p,
 .contact-left form {
-	padding-left: 100px;
+    padding-left: 100px;
 }
 
 .contact-left p {
-	font-family: 'Ubuntu', sans-serif;
-	color: #a3a3a3;
-	font-size: 14px;
-	line-height: 1.6;
-	letter-spacing: 0.2px;
-	margin-bottom: 20px;
-	padding-left: 100px;
-	width: 1000px;
-	max-width: none;
+    font-family: 'Ubuntu', sans-serif;
+    color: #a3a3a3;
+    font-size: 14px;
+    line-height: 1.6;
+    letter-spacing: 0.2px;
+    margin-bottom: 20px;
+    padding-left: 100px;
+    width: 1000px;
+    max-width: none;
 }
 
 .contact-left input {
-	display: block;
-	width: 100%;
-	margin-bottom: 5px;
-	padding: 8px 10px;
-	border: 1px solid #ccc;
-	background-color: #f6f6f6;
-	height: 35px;
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    background-color: #f6f6f6;
+    height: 35px;
 }
 
 .contact-left textarea {
-	display: block;
-	width: 100%;
-	margin-bottom: 15px;
-	padding: 10px;
-	border: 1px solid #ccc;
-	background-color: #f6f6f6;
-	height: 150px;
-	resize: vertical;
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f6f6f6;
+    height: 150px;
+    resize: vertical;
 }
 
 .contact-left input::placeholder,
 .contact-left textarea::placeholder {
-	color: #b3b3b3;
+    color: #b3b3b3;
 }
 
 .contact-left button {
-	background: #f26522;
-	color: white;
-	padding: 12px 22px;
-	border: none;
-	font-weight: bold;
-	cursor: pointer;
-	border-radius: 0;
-	text-transform: uppercase;
-	font-size: 14px;
-	margin-top: 13px;
+    background: #f26522;
+    color: white;
+    padding: 12px 22px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 0;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-top: 13px;
 }
 
 .contact-right p {
-	margin: 0;
-	padding: 0;
-	font-family: 'Myriad Pro', sans-serif;
-	font-size: 14px;
-	font-weight: normal;
-	line-height: 1.1;
-	opacity: 0.8;
+    margin: 0;
+    padding: 0;
+    font-family: 'Myriad Pro', sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.1;
+    opacity: 0.8;
 }
 
 .contact-right p:first-of-type {
-	font-size: 14px;
-	padding: 0;
+    font-size: 14px;
+    padding: 0;
 }
 
 .contact-right p:first-of-type strong {
-	font-size: 16px;
-	font-weight: normal;
-	padding-bottom: 0;
-	margin-bottom: 10px;
-	display: block;
-	opacity: 1;
+    font-size: 16px;
+    font-weight: normal;
+    padding-bottom: 0;
+    margin-bottom: 10px;
+    display: block;
+    opacity: 1;
 }
 
 .contact-right p:nth-of-type(2) {
-	margin-top: 25px;
+    margin-top: 25px;
 }
 
 .social-icons {
-	margin-top: 100px;
+    margin-top: 100px;
 }
 
 .social-icons a {
-	display: inline-block;
-	margin-right: -30px;
+    display: inline-block;
+    margin-right: -30px;
 }
 
 .social-icons a:first-child img {
-	position: relative;
-	top: -12px;
-	transform: scale(1.5);
+    position: relative;
+    top: -12px;
+    transform: scale(1.5);
 }
 
 .social-icons a:last-child {
-	margin-left: 16px;
+    margin-left: 16px;
 }
 
 .social-icons a:last-child img {
-	position: relative;
-	top: 6px;
-	transform: scale(1.6);
+    position: relative;
+    top: 6px;
+    transform: scale(1.6);
 }
 
 /* Top Banner Styles */
