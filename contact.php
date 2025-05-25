@@ -5,40 +5,6 @@
 
 get_header(); ?>
 
-<div class="top-banner">
-    <div class="container">
-        <div class="banner-content">
-            <span class="banner-text">CALL US NOW!</span>
-            <a href="tel:<?php echo esc_attr(get_option('ct_phone')); ?>" class="banner-phone"><?php echo esc_html(get_option('ct_phone')); ?></a>
-        </div>
-    </div>
-</div>
-
-<div class="logo-container">
-    <div class="container">
-        <?php 
-        $logo = get_option('ct_logo');
-        if ($logo) {
-            echo '<img src="' . esc_url($logo) . '" alt="' . get_bloginfo('name') . '" class="site-logo">';
-        } else {
-            echo '<h1 class="site-logo">' . get_bloginfo('name') . '</h1>';
-        }
-        ?>
-    </div>
-</div>
-
-<nav class="main-navigation">
-    <div class="container">
-        <?php
-        wp_nav_menu(array(
-            'theme_location' => 'primary',
-            'menu_class' => 'nav-menu',
-            'container' => false,
-        ));
-        ?>
-    </div>
-</nav>
-
 <main class="contact-page-content">
     <div class="container">
         <div class="contact-grid">

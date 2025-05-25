@@ -7,9 +7,8 @@
  * @package CT_Custom
  */
 
-if ( ! is_active_sidebar( 'sidebar-1' ) ) {
-	return;
-}
+// Return early to prevent sidebar from loading
+return;
 ?>
 
 <aside id="secondary" class="widget-area">

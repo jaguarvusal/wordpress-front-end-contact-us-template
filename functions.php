@@ -44,7 +44,7 @@ if ( ! function_exists( 'ct_custom_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'ct-custom' ),
+			'primary' => esc_html__( 'Primary Menu', 'ct-custom' ),
 		) );
 
 		/*
@@ -104,15 +104,7 @@ add_action( 'after_setup_theme', 'ct_custom_content_width', 0 );
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
 function ct_custom_widgets_init() {
-	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'ct-custom' ),
-		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'ct-custom' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
+	// Remove sidebar registration
 }
 add_action( 'widgets_init', 'ct_custom_widgets_init' );
 
@@ -121,6 +113,7 @@ add_action( 'widgets_init', 'ct_custom_widgets_init' );
  */
 function ct_custom_scripts() {
 	wp_enqueue_style( 'ct-custom-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'ct-custom-navigation', get_template_directory_uri() . '/assets/css/navigation.css', array(), '1.0.0' );
 
 	wp_enqueue_script( 'ct-custom-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 

@@ -1,0 +1,27 @@
+.main-nav {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.main-menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-menu li {
+    margin: 0 1rem;
+}
+
+.main-menu a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.main-menu a:hover {
+    color: #ff6b00; /* Using the orange color from your theme */
+} 

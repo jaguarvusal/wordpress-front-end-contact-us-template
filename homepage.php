@@ -5,55 +5,6 @@ Template Name: Homepage
 get_header();
 ?>
 
-<div class="top-bar">
-  <div class="banner-left">
-    <span class="banner-text">CALL US NOW!</span>
-    <span class="banner-phone"><?php echo esc_html(get_option('ct_phone')); ?></span>
-  </div>
-  <div class="banner-right">
-    <a href="/login" class="banner-login">LOGIN</a>
-    <a href="/signup" class="banner-signup">SIGNUP</a>
-  </div>
-</div>
-
-<div class="gray-section">
-  <div class="container">
-    <?php 
-    $logo = get_option('ct_logo');
-    if ($logo) {
-        echo '<img src="' . esc_url($logo) . '" alt="' . get_bloginfo('name') . '" class="site-logo">';
-    } else {
-        echo '<div class="logo-text">
-            <span class="your-text">YOUR</span>
-            <span class="logo-text">LOGO</span>
-        </div>';
-    }
-    ?>
-    <nav class="main-nav">
-      <a href="#" class="nav-link">TITLE 1</a>
-      <a href="#" class="nav-link bold">TITLE 2
-        <div class="submenu-container">
-          <div class="submenu-wrapper">
-            <div class="submenu-item">SUBMENU 1</div>
-            <div class="submenu-item">SUBMENU 2</div>
-            <div class="submenu-item">SUBMENU 3</div>
-          </div>
-          <div class="submenu-wrapper">
-            <div class="submenu-item">SUBMENU 1</div>
-            <div class="submenu-item">SUBMENU 2</div>
-            <div class="submenu-item">SUBMENU 3</div>
-          </div>
-        </div>
-      </a>
-      <a href="#" class="nav-link">TITLE 3</a>
-      <a href="#" class="nav-link">TITLE 4</a>
-      <a href="#" class="nav-link">TITLE 5</a>
-      <a href="#" class="nav-link">TITLE 6</a>
-      <a href="#" class="nav-link">TITLE 7</a>
-    </nav>
-  </div>
-</div>
-
 <main class="site-main">
   <section class="contact-section">
     <div class="contact-left">
